@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdmserverobject:WSViewE xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmi:id="_E3f2gIaJEeeyEar2ATgYqA" name="Browse_items_isoCountry" description="[EN:isoCountry]" timestamp="1517417173918" digestValue="d989826ff4603b68b1247d571a41da6f" transformerPK="">
+  <searchableBusinessElements>isoCountry/isoCountry3</searchableBusinessElements>
+  <searchableBusinessElements>isoCountry/name</searchableBusinessElements>
+  <viewableBusinessElements>isoCountry/isoCountry3</viewableBusinessElements>
+  <viewableBusinessElements>isoCountry/name</viewableBusinessElements>
+  <isTransformerActive xmi:id="_E3f2gYaJEeeyEar2ATgYqA"/>
+</mdmserverobject:WSViewE>

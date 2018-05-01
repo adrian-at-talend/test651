@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdmserverobject:WSViewE xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmi:id="_JYGucQc_Eei6wZ8rXzloJw" name="Browse_items_failTest" description="[EN:failTest]" timestamp="1517592910045" digestValue="50140051cd26b0c7746cf6d3f02cae07" transformerPK="">
+  <searchableBusinessElements>failTest/failTestId</searchableBusinessElements>
+  <searchableBusinessElements>failTest/stuff</searchableBusinessElements>
+  <viewableBusinessElements>failTest/failTestId</viewableBusinessElements>
+  <viewableBusinessElements>failTest/stuff</viewableBusinessElements>
+  <isTransformerActive xmi:id="_JYGucgc_Eei6wZ8rXzloJw"/>
+</mdmserverobject:WSViewE>

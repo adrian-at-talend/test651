@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdmserverobject:WSViewE xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmi:id="_E0saIYaJEeeyEar2ATgYqA" name="Browse_items_selfRefencingExample" description="[EN:selfRefencingExample]" timestamp="1517417198777" digestValue="679cd011686c854e93d4dd31b696d8d5" transformerPK="">
+  <searchableBusinessElements>selfRefencingExample/selfRefencingExampleId</searchableBusinessElements>
+  <searchableBusinessElements>selfRefencingExample/name</searchableBusinessElements>
+  <searchableBusinessElements>selfRefencingExample/parentFk</searchableBusinessElements>
+  <viewableBusinessElements>selfRefencingExample/selfRefencingExampleId</viewableBusinessElements>
+  <viewableBusinessElements>selfRefencingExample/name</viewableBusinessElements>
+  <viewableBusinessElements>selfRefencingExample/parentFk</viewableBusinessElements>
+  <isTransformerActive xmi:id="_E0saIoaJEeeyEar2ATgYqA"/>
+</mdmserverobject:WSViewE>

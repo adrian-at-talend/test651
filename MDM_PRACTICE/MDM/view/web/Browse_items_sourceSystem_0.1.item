@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdmserverobject:WSViewE xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmi:id="_Eyk6QIaJEeeyEar2ATgYqA" name="Browse_items_sourceSystem" description="[EN:sourceSystem]" timestamp="1517417201873" digestValue="9dee0d35dea0e679f6181ed3173f9155" transformerPK="">
+  <searchableBusinessElements>sourceSystem/sourceSystemId</searchableBusinessElements>
+  <searchableBusinessElements>sourceSystem/name</searchableBusinessElements>
+  <searchableBusinessElements>sourceSystem/description</searchableBusinessElements>
+  <viewableBusinessElements>sourceSystem/sourceSystemId</viewableBusinessElements>
+  <viewableBusinessElements>sourceSystem/name</viewableBusinessElements>
+  <viewableBusinessElements>sourceSystem/description</viewableBusinessElements>
+  <isTransformerActive xmi:id="_Eyk6QYaJEeeyEar2ATgYqA"/>
+</mdmserverobject:WSViewE>

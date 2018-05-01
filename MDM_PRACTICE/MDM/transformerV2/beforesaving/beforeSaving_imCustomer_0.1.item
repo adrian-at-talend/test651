@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdmserverobject:WSTransformerV2E xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmi:id="_Ywyp8BCmEeiuw9gW0sQtbw" name="beforeSaving_imCustomer" description="beforeSaving_imCustomer template process">
+  <processSteps xmi:id="_Ywyp8RCmEeiuw9gW0sQtbw" pluginJNDI="amalto/local/transformer/plugin/xslt" description="Retrieve Message" parameters="&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:mdm=&quot;java:com.amalto.core.plugin.base.xslt.MdmExtension&quot; version=&quot;1.0&quot;>&#xA;&lt;xsl:output method=&quot;xml&quot; indent=&quot;yes&quot; omit-xml-declaration=&quot;yes&quot;/>&#xA;&lt;xsl:template match=&quot;/&quot; priority=&quot;1&quot;>&#xA;&lt;report>&#xA; &lt;message type=&quot;error&quot;>[EN:helo]&lt;/message>&#xA;&lt;/report>&#xA;&lt;/xsl:template>&#xA;&lt;/xsl:stylesheet>">
+    <inputMappings xmi:id="_Ywyp8hCmEeiuw9gW0sQtbw" pipelineVariable="_DEFAULT_" pluginVariable="xml"/>
+    <outputMappings xmi:id="_Ywyp8xCmEeiuw9gW0sQtbw" pipelineVariable="output_report" pluginVariable="text"/>
+  </processSteps>
+</mdmserverobject:WSTransformerV2E>

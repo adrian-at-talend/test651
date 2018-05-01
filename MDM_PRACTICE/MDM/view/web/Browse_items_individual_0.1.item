@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdmserverobject:WSViewE xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmi:id="_EzWWUYaJEeeyEar2ATgYqA" name="Browse_items_individual" description="[EN:individual]" timestamp="1517417170810" digestValue="cddd0ac75dd0d0479ec5ed0321cf886a" transformerPK="">
+  <searchableBusinessElements>individual/individualId</searchableBusinessElements>
+  <searchableBusinessElements>individual/partyFk</searchableBusinessElements>
+  <searchableBusinessElements>individual/titleFk</searchableBusinessElements>
+  <searchableBusinessElements>individual/first</searchableBusinessElements>
+  <searchableBusinessElements>individual/middle</searchableBusinessElements>
+  <searchableBusinessElements>individual/last</searchableBusinessElements>
+  <searchableBusinessElements>individual/dob</searchableBusinessElements>
+  <viewableBusinessElements>individual/individualId</viewableBusinessElements>
+  <viewableBusinessElements>individual/partyFk</viewableBusinessElements>
+  <viewableBusinessElements>individual/first</viewableBusinessElements>
+  <viewableBusinessElements>individual/middle</viewableBusinessElements>
+  <isTransformerActive xmi:id="_WDXQIIaKEeeyEar2ATgYqA"/>
+</mdmserverobject:WSViewE>

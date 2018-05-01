@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdmserverobject:WSViewE xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmi:id="_E2X1IIaJEeeyEar2ATgYqA" name="Browse_items_organisation" description="[EN:organisation]" timestamp="1517417177098" digestValue="f25f0f2034211432fde68ebb92e191ef" transformerPK="">
+  <searchableBusinessElements>organisation/organisationId</searchableBusinessElements>
+  <searchableBusinessElements>organisation/partyFk</searchableBusinessElements>
+  <searchableBusinessElements>organisation/name</searchableBusinessElements>
+  <searchableBusinessElements>organisation/dunsNumber</searchableBusinessElements>
+  <searchableBusinessElements>organisation/vatNumber</searchableBusinessElements>
+  <viewableBusinessElements>organisation/organisationId</viewableBusinessElements>
+  <viewableBusinessElements>organisation/partyFk</viewableBusinessElements>
+  <viewableBusinessElements>organisation/name</viewableBusinessElements>
+  <viewableBusinessElements>organisation/dunsNumber</viewableBusinessElements>
+  <viewableBusinessElements>organisation/vatNumber</viewableBusinessElements>
+  <isTransformerActive xmi:id="_E2X1IYaJEeeyEar2ATgYqA"/>
+</mdmserverobject:WSViewE>

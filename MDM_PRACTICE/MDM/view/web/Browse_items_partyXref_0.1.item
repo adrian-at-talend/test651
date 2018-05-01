@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdmserverobject:WSViewE xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmi:id="_E2-SEIaJEeeyEar2ATgYqA" name="Browse_items_partyXref" description="[EN:partyXref]" timestamp="1517417189470" digestValue="f523ef71ba473c6b2959f362eb84059c" transformerPK="">
+  <searchableBusinessElements>partyXref/partyXrefId</searchableBusinessElements>
+  <searchableBusinessElements>partyXref/partyFk</searchableBusinessElements>
+  <searchableBusinessElements>partyXref/sourceSystemFk</searchableBusinessElements>
+  <searchableBusinessElements>partyXref/sourceSystemPk</searchableBusinessElements>
+  <viewableBusinessElements>partyXref/partyXrefId</viewableBusinessElements>
+  <viewableBusinessElements>partyXref/partyFk</viewableBusinessElements>
+  <viewableBusinessElements>partyXref/sourceSystemFk</viewableBusinessElements>
+  <viewableBusinessElements>partyXref/sourceSystemPk</viewableBusinessElements>
+  <isTransformerActive xmi:id="_E2-SEYaJEeeyEar2ATgYqA"/>
+</mdmserverobject:WSViewE>

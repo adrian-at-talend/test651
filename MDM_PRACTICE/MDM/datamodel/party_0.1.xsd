@@ -1,0 +1,982 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.w3.org/2001/XMLSchema"/>
+    <xsd:element name="party">
+        <xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+        <xsd:complexType>
+<xsd:all>
+<xsd:element name="partyId" type="AUTO_INCREMENT">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="description" type="string255_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="1" name="partyType" type="partyType_T">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="1" name="addressList" type="addressList_T">
+<xsd:annotation>
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="phoneNumberList" type="phoneNumberList_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="status" type="status_T">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+            </xsd:all>
+</xsd:complexType>
+<xsd:unique name="party">
+<xsd:selector xpath="."/>
+<xsd:field xpath="partyId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:simpleType name="AUTO_INCREMENT">
+<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+<xsd:element name="individual">
+        <xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+        <xsd:complexType>
+<xsd:all>
+<xsd:element name="individualId" type="AUTO_INCREMENT">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="partyFk" type="string13_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">party/partyId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">party/description</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="titleFk" type="string13_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">refDataItem/refDataItemId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_Filter">refDataItem/refDataListFk$$=$$[Title]$$#</xsd:appinfo>
+
+<xsd:appinfo source="X_ForeignKeyInfo">refDataItem/name</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="first" type="string255_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="middle" type="string255_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="1" name="last" type="string255_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="dob" type="xsd:date">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="genderFk" type="string13_T">
+<xsd:annotation>
+
+<xsd:appinfo source="X_ForeignKey">refDataItem/refDataItemId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_Filter">refDataItem/refDataListFk$$=$$[Gender]$$#</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">refDataItem/name</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="countryUniqueList" type="countryUniqueList_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+            </xsd:all>
+</xsd:complexType>
+<xsd:unique name="individual">
+<xsd:selector xpath="."/>
+<xsd:field xpath="individualId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:simpleType name="string13_T">
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="13"/>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:element name="refDataList">
+        <xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+        <xsd:complexType>
+<xsd:all>
+<xsd:element name="refDataListId" type="string20_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="description" type="string255_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="refDataList">
+<xsd:selector xpath="."/>
+<xsd:field xpath="refDataListId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="refDataItem">
+        <xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+        <xsd:complexType>
+<xsd:all>
+<xsd:element name="refDataItemId" type="AUTO_INCREMENT">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="refDataListFk" type="string22_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">refDataList/refDataListId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+
+
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="name" type="string50_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="description" type="string255_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="sourceXrefList" type="sourceXrefList_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="associatedCountryList" type="associatedCountryList_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+            </xsd:all>
+</xsd:complexType>
+<xsd:unique name="refDataItem">
+<xsd:selector xpath="."/>
+<xsd:field xpath="refDataItemId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:simpleType name="string50_T">
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="50"/>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="string255_T">
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:complexType name="sourceXrefList_T">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="sourceXrefItem" type="sourceXrefItem_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="sourceXrefItem_T">
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="0" name="sourcePk" type="string50_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="sourceLabel" type="string255_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="sourceSystemFk" type="string13_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">sourceSystem/sourceSystemId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">sourceSystem/name</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:element name="sourceSystem">
+        <xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+        <xsd:complexType>
+<xsd:all>
+<xsd:element name="sourceSystemId" type="AUTO_INCREMENT">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="name" type="string50_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="description" type="string255_T">
+<xsd:annotation>
+
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="sourceSystem">
+<xsd:selector xpath="."/>
+<xsd:field xpath="sourceSystemId"/>
+</xsd:unique>
+</xsd:element>
+    <xsd:simpleType name="string20_T">
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+    <xsd:complexType name="countryUniqueList_T">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="countryUniqueItem" type="countryUniqueItem_T">
+<xsd:annotation>
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+    <xsd:complexType name="countryUniqueItem_T">
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="associatedCountryFk" type="string5_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">isoCountry/isoCountry3</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">isoCountry/isoCountry3</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="uniqueId" type="string255_T">
+<xsd:annotation>
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="uniqueItemTypeFk" type="string13_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">refDataItem/refDataItemId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">refDataItem/name</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_Filter">refDataItem/refDataListFk$$=$$CountryUnique$$And#refDataItem/associatedCountryList/associatedCountryFk$$=$$individual/countryUniqueList/countryUniqueItem/associatedCountryFk$$And#</xsd:appinfo>
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+    <xsd:element name="isoCountry">
+        <xsd:annotation>
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+        <xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="isoCountry3" type="xsd:string">
+<xsd:annotation>
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="name" type="string255_T">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+            </xsd:all>
+</xsd:complexType>
+<xsd:unique name="isoCountry">
+<xsd:selector xpath="."/>
+<xsd:field xpath="isoCountry3"/>
+</xsd:unique>
+</xsd:element>
+    <xsd:complexType name="associatedCountryList_T">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="associatedCountryFk" type="string5_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">isoCountry/isoCountry3</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+    <xsd:simpleType name="string5_T">
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="5"/>
+</xsd:restriction>
+</xsd:simpleType>
+    <xsd:simpleType name="string22_T">
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="22"/>
+</xsd:restriction>
+</xsd:simpleType>
+    <xsd:element name="address">
+        <xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+        <xsd:complexType>
+<xsd:all>
+<xsd:element name="addressId" type="AUTO_INCREMENT">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="premise" type="string255_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="building" type="string255_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="poBox" type="string255_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="depThoroughfare" type="string255_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="Thoroughfare" type="string255_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="doDepLocality" type="string255_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="depLocality" type="string255_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="locality" type="string255_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="subAdministrativeArea" type="string255_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="administrativeArea" type="string255_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="superAdministrativeArea" type="string255_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="postcode" type="string50_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="1" name="countryFk" type="string5_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">isoCountry/isoCountry3</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="lat" type="xsd:decimal">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="long" type="xsd:decimal">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="postalAddressText" type="longText_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+            </xsd:all>
+</xsd:complexType>
+<xsd:unique name="address">
+<xsd:selector xpath="."/>
+<xsd:field xpath="addressId"/>
+</xsd:unique>
+</xsd:element>
+    <xsd:complexType name="addressList_T">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="1" name="address" type="addressItem_T">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+    <xsd:complexType name="addressItem_T">
+<xsd:all>
+            <xsd:element maxOccurs="1" minOccurs="1" name="shipping" type="xsd:boolean">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="invoice" type="xsd:boolean">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="marketing" type="xsd:boolean">
+<xsd:annotation>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+            <xsd:element maxOccurs="1" minOccurs="1" name="addressFk" type="string13_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">address/addressId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">address/postcode</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+        </xsd:all>
+</xsd:complexType>
+    <xsd:simpleType name="longText_T">
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="21844"/>
+</xsd:restriction>
+</xsd:simpleType>
+    <xsd:element name="partyRelationship">
+        <xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+        <xsd:complexType>
+<xsd:all>
+<xsd:element name="partyRelationshipId" type="AUTO_INCREMENT">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="1" name="partyRelationshipTypeFk" type="string13_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">partyRelationshipType/partyRelationshipTypeId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">partyRelationshipType/name</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="0" name="parentPartyFk" type="string13_T">
+<xsd:annotation>
+
+<xsd:appinfo source="X_ForeignKey">party/partyId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">party/description</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="1" name="relatedPartyList" type="relatedPartyList_T">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+            </xsd:all>
+</xsd:complexType>
+<xsd:unique name="partyRelationship">
+<xsd:selector xpath="."/>
+<xsd:field xpath="partyRelationshipId"/>
+</xsd:unique>
+</xsd:element>
+    <xsd:element name="organisation">
+        <xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+        <xsd:complexType>
+<xsd:all>
+                <xsd:element name="organisationId" type="AUTO_INCREMENT">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="1" name="partyFk" type="string13_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">party/partyId</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">party/description</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="1" name="name" type="string255_T">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="1" name="dunsNumber" type="string50_T">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+                <xsd:element maxOccurs="1" minOccurs="1" name="vatNumber" type="string50_T">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+            </xsd:all>
+</xsd:complexType>
+<xsd:unique name="organisation">
+<xsd:selector xpath="."/>
+<xsd:field xpath="organisationId"/>
+</xsd:unique>
+</xsd:element>
+    <xsd:complexType name="phoneNumberList_T">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="phoneNumberItem" type="phoneNumberItem_T">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+    <xsd:complexType name="phoneNumberItem_T">
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="number" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="type" type="phone_T">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="marketingOk" type="xsd:boolean">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+        </xsd:all>
+</xsd:complexType>
+    <xsd:simpleType name="phone_T">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="Home"/>
+<xsd:enumeration value="Mobile"/>
+<xsd:enumeration value="Work"/>
+<xsd:enumeration value="Fax"/>
+<xsd:maxLength value="10"/>
+</xsd:restriction>
+</xsd:simpleType>
+    <xsd:element name="selfRefencingExample">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="selfRefencingExampleId" type="AUTO_INCREMENT">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="name" type="string50_T">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="parentFk" type="string13_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">selfRefencingExample/selfRefencingExampleId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+
+
+<xsd:appinfo source="X_ForeignKeyInfo">selfRefencingExample/name</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="selfRefencingExample">
+<xsd:selector xpath="."/>
+            <xsd:field xpath="selfRefencingExampleId"/>
+        </xsd:unique>
+</xsd:element>
+    <xsd:element name="partyXref">
+        <xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+        <xsd:complexType>
+<xsd:all>
+<xsd:element name="partyXrefId" type="AUTO_INCREMENT">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="partyFk" type="string13_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">party/partyId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">party/description</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="sourceSystemFk" type="string13_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">sourceSystem/sourceSystemId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">sourceSystem/name</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="sourceSystemPk" type="string50_T">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="partyXref">
+<xsd:selector xpath="."/>
+<xsd:field xpath="partyXrefId"/>
+</xsd:unique>
+</xsd:element>
+    <xsd:complexType name="relatedPartyList_T">
+<xsd:sequence>
+<xsd:element maxOccurs="unbounded" minOccurs="0" name="partyFk" type="string13_T">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">party/partyId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">party/description</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+    <xsd:element name="partyRelationshipType">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="partyRelationshipTypeId" type="AUTO_INCREMENT">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="name" type="string50_T">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="parentChild" type="xsd:boolean">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="relatedPartyCardinalityMin" type="xsd:integer">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="relatedPartyCardinalityMax" type="xsd:integer">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="parentPartyType" type="partyType_T">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="1" name="relatedPartyType" type="partyType_T">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">partyAdmin</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="partyRelationshipType">
+<xsd:selector xpath="."/>
+<xsd:field xpath="partyRelationshipTypeId"/>
+</xsd:unique>
+</xsd:element>
+    <xsd:simpleType name="partyType_T">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="Individual"/>
+<xsd:enumeration value="Organisation"/>
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+    <xsd:simpleType name="status_T">
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="Pending Approval"/>
+<xsd:enumeration value="Live"/>
+<xsd:enumeration value="Archived"/>
+<xsd:maxLength value="20"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>

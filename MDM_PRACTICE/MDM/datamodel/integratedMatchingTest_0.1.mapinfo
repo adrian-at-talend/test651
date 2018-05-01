@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<matchrule:MatchRuleMapInfo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:matchrule="http://www.talend.org/mdm/server/matchrule">
+  <entityMapInfos entityName="imCustomer" matchRuleDefName="testMR1">
+    <survivorshipKeyMap key="first" value="imCustomer/first"/>
+    <survivorshipKeyMap key="last" value="imCustomer/last"/>
+    <blockingKeyDefinition>
+      <blockingKeys keyName="imCustomer/email"/>
+    </blockingKeyDefinition>
+    <matchRuleMapInfoPages name="Match Rule 1">
+      <matchKeyMap key="first" value="imCustomer/first"/>
+      <matchKeyMap key="last" value="imCustomer/last"/>
+    </matchRuleMapInfoPages>
+  </entityMapInfos>
+</matchrule:MatchRuleMapInfo>

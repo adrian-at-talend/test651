@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdmserverobject:WSViewE xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmi:id="_bXyoIQc0EeipFc7imcAwgg" name="Browse_items_imCustomer" description="[EN:imCustomer]" timestamp="1517482409934" digestValue="a3388d21d2ba4526315b823bdc2577ff" transformerPK="">
+  <searchableBusinessElements>imCustomer/customerId</searchableBusinessElements>
+  <searchableBusinessElements>imCustomer/first</searchableBusinessElements>
+  <searchableBusinessElements>imCustomer/last</searchableBusinessElements>
+  <searchableBusinessElements>imCustomer/dob</searchableBusinessElements>
+  <searchableBusinessElements>imCustomer/email</searchableBusinessElements>
+  <viewableBusinessElements>imCustomer/customerId</viewableBusinessElements>
+  <viewableBusinessElements>imCustomer/first</viewableBusinessElements>
+  <viewableBusinessElements>imCustomer/last</viewableBusinessElements>
+  <viewableBusinessElements>imCustomer/dob</viewableBusinessElements>
+  <viewableBusinessElements>imCustomer/email</viewableBusinessElements>
+  <isTransformerActive xmi:id="_bXyoIgc0EeipFc7imcAwgg"/>
+</mdmserverobject:WSViewE>

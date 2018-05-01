@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdmserverobject:WSViewE xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmi:id="_E0N5AYaJEeeyEar2ATgYqA" name="Browse_items_address" description="[EN:address]" timestamp="1517417167721" digestValue="936f22a9a1c829fcaf71980ab67a4807" transformerPK="">
+  <searchableBusinessElements>address/addressId</searchableBusinessElements>
+  <searchableBusinessElements>address/premise</searchableBusinessElements>
+  <searchableBusinessElements>address/building</searchableBusinessElements>
+  <searchableBusinessElements>address/poBox</searchableBusinessElements>
+  <searchableBusinessElements>address/depThoroughfare</searchableBusinessElements>
+  <searchableBusinessElements>address/Thoroughfare</searchableBusinessElements>
+  <searchableBusinessElements>address/doDepLocality</searchableBusinessElements>
+  <searchableBusinessElements>address/depLocality</searchableBusinessElements>
+  <searchableBusinessElements>address/locality</searchableBusinessElements>
+  <searchableBusinessElements>address/subAdministrativeArea</searchableBusinessElements>
+  <searchableBusinessElements>address/administrativeArea</searchableBusinessElements>
+  <searchableBusinessElements>address/superAdministrativeArea</searchableBusinessElements>
+  <searchableBusinessElements>address/postcode</searchableBusinessElements>
+  <searchableBusinessElements>address/countryFk</searchableBusinessElements>
+  <searchableBusinessElements>address/lat</searchableBusinessElements>
+  <searchableBusinessElements>address/long</searchableBusinessElements>
+  <searchableBusinessElements>address/postalAddressText</searchableBusinessElements>
+  <viewableBusinessElements>address/addressId</viewableBusinessElements>
+  <viewableBusinessElements>address/premise</viewableBusinessElements>
+  <viewableBusinessElements>address/building</viewableBusinessElements>
+  <viewableBusinessElements>address/Thoroughfare</viewableBusinessElements>
+  <viewableBusinessElements>address/locality</viewableBusinessElements>
+  <viewableBusinessElements>address/postcode</viewableBusinessElements>
+  <isTransformerActive xmi:id="_5lC1YIaJEeeyEar2ATgYqA"/>
+</mdmserverobject:WSViewE>

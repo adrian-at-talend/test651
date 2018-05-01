@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdmserverobject:WSViewE xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmi:id="_bVSGsQc0EeipFc7imcAwgg" name="Browse_items_imAddress" description="[EN:imAddress]" timestamp="1517482406840" digestValue="cd347be650c95fd87838024561485671" transformerPK="">
+  <searchableBusinessElements>imAddress/addressId</searchableBusinessElements>
+  <searchableBusinessElements>imAddress/street</searchableBusinessElements>
+  <searchableBusinessElements>imAddress/town</searchableBusinessElements>
+  <searchableBusinessElements>imAddress/postcode</searchableBusinessElements>
+  <viewableBusinessElements>imAddress/addressId</viewableBusinessElements>
+  <viewableBusinessElements>imAddress/street</viewableBusinessElements>
+  <viewableBusinessElements>imAddress/town</viewableBusinessElements>
+  <viewableBusinessElements>imAddress/postcode</viewableBusinessElements>
+  <isTransformerActive xmi:id="_bVSGsgc0EeipFc7imcAwgg"/>
+</mdmserverobject:WSViewE>
